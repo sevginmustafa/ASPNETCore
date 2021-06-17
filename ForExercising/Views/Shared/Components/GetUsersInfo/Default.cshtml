@@ -1,0 +1,19 @@
+﻿@model IEnumerable<ForExercising.ViewModels.ViewComponents.GetUsersInfoViewModel>
+
+@{ int i = 1;}
+
+<table class="table table-bordered table-dark">
+    <tr>
+        <td>#</td>
+        <td>Id</td>
+        <td>Username</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@(i++)</td>
+            <td>@item.Id</td>
+            <td>@item.Username</td>
+        </tr>
+    }
+</table>

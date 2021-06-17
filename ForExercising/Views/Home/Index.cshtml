@@ -1,0 +1,43 @@
+﻿@inject IGetUsersCountService GetUsersCountService
+@model ForExercising.ViewModels.UserRegisterFormViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to @ViewBag.ProjectName</h1>
+    <p>@ViewData["Message"]: @ViewData["Time"]</p>
+    <p>Current users count: @GetUsersCountService.GetCount()</p>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+@section Links{
+    <a href="https://youtube.com">YouTube</a>
+}
+
+@*<form asp-action="Index">
+        <input asp-for="Username" />
+        <input asp-for="Email" />
+        <input asp-for="Password" />
+        <input asp-for="ConfirmPassword" />
+    </form>*@
+
+<div class="col">
+    <div class="form-group">
+        <label for="Input_Username">Username</label>
+        <input class="form-control" type="text" name="Input_Username" />
+    </div>
+    <div class="form-group">
+        <label for="Input_Email">Username</label>
+        <input class="form-control" type="email" name="Input_Email" />
+    </div>
+    <div class="form-group">
+        <label for="Input_Password">Password</label>
+        <input class="form-control" type="text" name="Input_Password" />
+    </div>
+    <div class="form-group">
+        <label for="Input_ConfirmPassword">ConfirmPassword</label>
+        <input class="form-control" type="text" name="Input_ConfirmPassword" />
+    </div>
+</div>

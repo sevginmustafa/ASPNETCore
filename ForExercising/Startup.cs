@@ -1,3 +1,5 @@
+using ForExercising.CustomFilters;
+using ForExercising.CustomMiddlewares;
 using ForExercising.Data;
 using ForExercising.Services;
 using Microsoft.AspNetCore.Builder;
@@ -12,11 +14,10 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace ForExercising
 {
-    public class Startup
+    public partial class Startup
     {
         public Startup(IConfiguration configuration)
         {
@@ -41,6 +42,11 @@ namespace ForExercising
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //app.UseExceptionHandler("/Home/Error");
+            //app.UseStatusCodePagesWithRedirects("/Home/StatusCodeException?statusCode={0}");
+
+            //app.UseCustom();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -52,6 +58,33 @@ namespace ForExercising
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            //app.Map("/softuni", app =>
+            //    {
+            //        app.Map("/Welcome", app => app.UseWelcomePage());
+
+            //    });
+
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("1");
+            //    await next();
+            //    await context.Response.WriteAsync("7");
+            //});
+
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync("STOP");
+            //});
+
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("2");
+            //    await next();
+            //    await context.Response.WriteAsync("6");
+            //});
+
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

@@ -1,0 +1,58 @@
+﻿@model ForExercising.ViewModels.AddYuGiOhCardViewModel
+@using ForExercising.ViewModels.Enums
+
+<h1>Add Card</h1>
+
+<form method="post" class="col-md-6">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Attribute"></label>
+        <select asp-for="Attribute" class="form-control" asp-items="@Html.GetEnumSelectList<MonsterAttribute>()"></select>
+        <span asp-validation-for="Attribute" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Level"></label>
+        <input asp-for="Level" class="form-control" />
+        <span asp-validation-for="Level" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Artwork"></label>
+        <input asp-for="Artwork" class="form-control" />
+        <span asp-validation-for="Artwork" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Type"></label>
+        <select asp-for="Type" class="form-control" asp-items="@Html.GetEnumSelectList<MonsterType>()"></select>
+        <span asp-validation-for="Type" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Attack"></label>
+        <input asp-for="Attack" class="form-control" />
+        <span asp-validation-for="Attack" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Defense"></label>
+        <input asp-for="Defense" class="form-control" />
+        <span asp-validation-for="Defense" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CreatedOn"></label>
+        <input asp-for="CreatedOn" class="form-control" />
+        <span asp-validation-for="CreatedOn" class="text-danger"></span>
+    </div>
+    <input type="submit" class="btn btn-primary" />
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial.cshtml" />
+}

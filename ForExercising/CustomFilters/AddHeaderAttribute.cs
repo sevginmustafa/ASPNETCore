@@ -15,7 +15,7 @@ namespace ForExercising.CustomFilters
 
         public override void OnResultExecuting(ResultExecutingContext context)
         {
-            context.HttpContext.Response.Headers.Add(name,new string[] { value });
+            context.HttpContext.Response.Headers.Add(name,new string[]{ value});
             base.OnResultExecuting(context);
         }
     }

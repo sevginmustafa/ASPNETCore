@@ -98,6 +98,7 @@ namespace ForExercising
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute("custom","{controller=Cards}/{action=Add}/{name}/{attack}/{defense}");
                 endpoints.MapRazorPages();
             });
         }

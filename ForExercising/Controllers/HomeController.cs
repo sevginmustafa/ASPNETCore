@@ -1,19 +1,20 @@
 ﻿using ForExercising.CustomFilters;
 using ForExercising.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace ForExercising.Controllers
 {
-
-    [AddHeader("height","175cm")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -39,9 +40,21 @@ namespace ForExercising.Controllers
             return Content(this.configuration["ConnectionStrings:DefaultConnection"]);
         }
 
-        public IActionResult Privacy()
+        public IActionResult Privacy([Required][MaxLength(10)][RegularExpression(@"[A-Za-z]+")] string name, [Range(0, 150)] int age, string[] hobbies)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                return this.Json($"My name is {name} and I am {age} years old! My hobbies are: { string.Join(", ", hobbies)}");
+            }
+
+            StringBuilder errors = new StringBuilder();
+
+            foreach (var error in ModelState.Values.SelectMany(x => x.Errors))
+            {
+                errors.AppendLine(error.ErrorMessage);
+            }
+
+            return this.Json(errors.ToString());
         }
 
         public IActionResult StatusCodeException(int statusCode)

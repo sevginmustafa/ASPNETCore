@@ -14,8 +14,6 @@
 
         public string Description { get; set; }
 
-        public double Rating { get; set; }
-
         public string Language { get; set; }
 
         public double Budget { get; set; }

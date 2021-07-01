@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using AngleSharp;
+using AngleSharp.Dom;
 using Newtonsoft.Json;
 
 namespace ScrappingTheMovieDb
@@ -17,7 +19,7 @@ namespace ScrappingTheMovieDb
 
             List<GetMovieDTO> movies = new List<GetMovieDTO>();
 
-            Parallel.For(1, 100, (i, state) =>
+            Parallel.For(447332, 447333, (i, state) =>
             {
                 var movie = GetMovieProperties(context, i);
 
@@ -27,19 +29,30 @@ namespace ScrappingTheMovieDb
                 }
             });
 
-            var file = JsonConvert.SerializeObject(movies, Formatting.Indented);
+            //var file = JsonConvert.SerializeObject(movies, Formatting.Indented);
 
-            File.WriteAllText("../../../movies.json", file);
+            //File.WriteAllText("../../../movies.json", file);
+
+            //var genres = JsonConvert.SerializeObject(GetAllGenres(context), Formatting.Indented);
+
+            //File.WriteAllText("../../../genres.json", genres);
         }
 
-        private static GetGenresDTO(IBrowsingContext context, int id)
+        private static IEnumerable<GenreDTO> GetAllGenres(IBrowsingContext context)
         {
-            var document = context.OpenAsync($"#sidebar > div:nth-child(12) > span > div > div > div > div > div > div > div:nth-child(1) > div > a").GetAwaiter().GetResult();
+            List<GenreDTO> genres = new List<GenreDTO>();
 
-            foreach (var item in document)
+            var document = context.OpenAsync("https://www.imdb.com/feature/genre/").GetAwaiter().GetResult();
+
+            var elements = document.QuerySelector($"#sidebar > div:nth-child(12) > span > div > div > div > div > div > div")
+                .TextContent.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (var item in elements)
             {
-
+                genres.Add(new GenreDTO { Name = item });
             }
+
+            return genres;
         }
 
         private static GetMovieDTO GetMovieProperties(IBrowsingContext context, int id)
@@ -79,9 +92,6 @@ namespace ScrappingTheMovieDb
                 //Get Description
                 var description = document.QuerySelector(".overview").TextContent.Trim();
 
-                //Get Rating
-                var rating = double.Parse(document.QuerySelector(".user_score_chart").Attributes.FirstOrDefault(x => x.Name == "data-percent").Value);
-
                 //Get TrailerUrl
                 var trailerUrl = "https://www.youtube.com/watch?v=" +
                     document.QuerySelector("li.video.none > a")
@@ -102,6 +112,20 @@ namespace ScrappingTheMovieDb
                     .Replace("$", string.Empty)
                     .Replace(",", string.Empty));
 
+                //Get Actors
+                var characters = document.QuerySelectorAll(".people.scroller > .card > .character");
+                var elements = document.QuerySelectorAll(".people.scroller > .card > p > a");
+
+                foreach (var item in elements)
+                {
+                    foreach (var att in item.Attributes)
+                    {
+                        Console.WriteLine(att.Value);
+                    }
+                }
+
+                //IDocument personInfo = GetPersonProperties(context, document);
+
                 var movie = new GetMovieDTO
                 {
                     Title = title,
@@ -110,7 +134,6 @@ namespace ScrappingTheMovieDb
                     ReleaseYear = releaseYear,
                     Runtime = runtime,
                     Description = description,
-                    Rating = rating,
                     Language = language,
                     Budget = budget
                 };
@@ -121,6 +144,44 @@ namespace ScrappingTheMovieDb
             {
                 return null;
             }
+        }
+
+        private static IDocument GetPersonProperties(IBrowsingContext context, IDocument document)
+        {
+            //Get Directors
+            var directorLink = "https://www.themoviedb.org" +
+                document.QuerySelectorAll(".people.no_image > li > p > a")
+                .FirstOrDefault()
+                .Attributes.FirstOrDefault().Value;
+
+            var directorInfo = context.OpenAsync(directorLink).GetAwaiter().GetResult();
+
+            //Get Name
+            var name = directorInfo.QuerySelector(".title > h2 > a").TextContent;
+
+            //Get Bio
+            var bio = directorInfo.QuerySelectorAll(".text.initial > p").FirstOrDefault().TextContent;
+
+            //Get Birthday
+            var birthdayAndBirthPlace = directorInfo.QuerySelectorAll(".full").Select(x => x.TextContent.Replace("  ", string.Empty)).ToArray();
+
+            var birthday = Regex.Match(birthdayAndBirthPlace[0], @"[0-9]{4}-[0-9]{2}-[0-9]{2}").ToString();
+
+            var cityAndCountry = birthdayAndBirthPlace[1].Replace("Place of Birth ", string.Empty).Split(", ").ToArray();
+
+            var city = cityAndCountry.FirstOrDefault();
+            var country = cityAndCountry.LastOrDefault();
+
+            //Get Gender
+            var gender = directorInfo.QuerySelector("#media_v4 > div > div > div.grey_column > div > section > section > p:nth-child(3)")
+                .TextContent.Replace("Gender ", string.Empty);
+
+            //Get CoverImageUrl
+            var coverImageUrl = "https://www.themoviedb.org" +
+                directorInfo.QuerySelector("#original_header > div > div.image_content > img")
+                .Attributes.FirstOrDefault(x => x.Name == "data-src").Value;
+
+            return directorInfo;
         }
     }
 }

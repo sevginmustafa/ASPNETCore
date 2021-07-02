@@ -50,7 +50,8 @@ namespace ScrappingTheMovieDb
 
             //File.WriteAllText("../../../genres.json", genres);
         }
-
+        
+        //Not used in the current project (gets all movie genres from IMDB)
         private static IEnumerable<GenreDTO> GetAllGenres(IBrowsingContext context)
         {
             List<GenreDTO> genres = new List<GenreDTO>();

@@ -1,0 +1,133 @@
+[
+  {
+    "Title": "Psycho",
+    "ReleaseYear": 1960,
+    "Runtime": "1h 49m",
+    "Description": "When larcenous real estate clerk Marion Crane goes on the lam with a wad of cash and hopes of starting a new life, she ends up at the notorious Bates Motel, where manager Norman Bates cares for his housebound mother.",
+    "Language": "English",
+    "Budget": 806947.0,
+    "Revenue": 32000000.0,
+    "CoverImageUrl": "https://www.themoviedb.org//t/p/w300_and_h450_bestv2/5j5tdV8tMTy7FBdSNiYxp9Fj1Or.jpg",
+    "TrailerUrl": "https://www.youtube.com/watch?v=DTJQfFQ40lI",
+    "Director": {
+      "Name": "Alfred Hitchcock",
+      "Biography": "Sir Alfred Joseph Hitchcock, KBE (13 August 1899 – 29 April 1980) was an English director and producer. He pioneered many techniques in the suspense and psychological thriller genres. After a successful career in his native United Kingdom in both silent films and early talkies, Hitchcock moved to Hollywood. In 1956 he became an American citizen while remaining a British subject. Over a career spanning more than half a century, Hitchcock fashioned for himself a distinctive and recognizable directorial style. He pioneered the use of a camera made to move in a way that mimics a person's gaze, forcing viewers to engage in a form of voyeurism. He framed shots to maximize anxiety, fear, or empathy, and used innovative film editing. His stories frequently feature fugitives on the run from the law alongside “icy blonde” female characters. Many of Hitchcock's films have twist endings and thrilling plots featuring depictions of violence, murder, and crime, although many of the mysteries function as decoys or MacGuffins meant only to serve thematic elements in the film and the extremely complex psychological examinations of the characters. Hitchcock's films also borrow many themes from psychoanalysis and feature strong sexual undertones. Through his cameo appearances in his own films, interviews, film trailers, and the television program Alfred Hitchcock Presents, he became a cultural icon. Hitchcock directed more than fifty feature films in a career spanning six decades. Often regarded as the greatest British filmmaker, he came first in a 2007 poll of film critics in Britain's Daily Telegraph, which said: “Unquestionably the greatest filmmaker to emerge from these islands, Hitchcock did more than any director to shape modern cinema, which would be utterly different without him. His flair was for narrative, cruelly withholding crucial information (from his characters and from us) and engaging the emotions of the audience like no one else.” The magazine MovieMaker has described him as the most influential filmmaker of all-time, and he is widely regarded as one of cinema's most significant artists.",
+      "Gender": "Male",
+      "Birthday": "1899-08-13",
+      "Deathday": "1980-04-29",
+      "Birthplace": "Leytonstone",
+      "Country": "UK",
+      "CoverImageUrl": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/108fiNM6poRieMg7RIqLJRxdAwG.jpg"
+    },
+    "Actors": [
+      {
+        "Name": "Vera Miles",
+        "Biography": "Vera June Miles (born August 23, 1929) is an American actress. Born in Boise City, Oklahoma, Vera Miles attended school in Pratt,  Kansas and Wichita, Kansas. The patrician beauty of Miss Miles won her  the title of \"Miss Kansas\" in 1948, leading soon to small roles in  Hollywood films and television series. Fame came to the forthright,  spirited Miles when she attracted the attention of two master directors,  Alfred Hitchcock and John Ford. Ford cast her in the classic western The Searchers (1956) and Hitchcock, who put her under personal contract and hailed her as his \"new Grace Kelly\", paired her with the great Henry Fonda in The Wrong Man (1956). Hitchcock cast Miles in the potentially star-making role of Judy Barton in Vertigo  (1958), but Miles withdrew from the film when she became pregnant.  Hitchcock gave Miles a supporting role in another masterpiece Psycho (1960), as did Ford when he cast her opposite John Wayne and James Stewart in The Man Who Shot Liberty Valance (1962), She also starred in such films as Beau James (1957) opposite Bob Hope, The FBI Story (1959) opposite Stewart, Back Street (1961) opposite Susan Hayward and John Gavin and Sergeant Ryker (1968) opposite Lee Marvin,  as well as showing her consistently remarkable and versatile talent on  dozens of popular television movies and series including The Alfred Hitchcock Hour (1962), Twilight Zone (1959), The Outer Limits (1963), The Fugitive (1963), My Three Sons (1960), Bonanza (1959), \"Columbo\" and Murder, She Wrote (1984). In 1983, she reprised her role as \"Lila Crane\" in the film sequel Psycho II (1983), starring Anthony Perkins.  Although, too often, the stunningly beautiful Miles' gifts were  underutilized, before her retirement in 1995, hers was a most intriguing  and enduring Hollywood career.",
+        "Gender": "Female",
+        "Birthday": "1929-08-23",
+        "Birthplace": "Boise City",
+        "Country": "USA",
+        "CoverImageUrl": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/7LYmvlED12KqDonOcN90OKZHG3S.jpg",
+        "CharacterName": "Lila Crane"
+      },
+      {
+        "Name": "Anthony Perkins",
+        "Biography": "Anthony Perkins (April 4, 1932 – September 12, 1992) was an American actor and singer. He is best known for his role as Norman Bates in Alfred Hitchcock's Psycho and his Oscar-nominated role in Friendly Persuasion (1956).",
+        "Gender": "Male",
+        "Birthday": "1932-04-04",
+        "Deathday": "1992-09-12",
+        "Birthplace": "New York City",
+        "Country": "USA",
+        "CoverImageUrl": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/7FipKwmg2woHNvt5ATeXLBirHXs.jpg",
+        "CharacterName": "Norman Bates"
+      },
+      {
+        "Name": "John Gavin",
+        "Biography": "From Wikipedia, the free encyclopedia",
+        "Gender": "Male",
+        "Birthday": "1931-04-08",
+        "Deathday": "2018-02-09",
+        "Birthplace": "Los Angeles",
+        "Country": "USA",
+        "CoverImageUrl": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/Y0MsuRKkmYZNwoFteh76pX4IsF.jpg",
+        "CharacterName": "Sam Loomis"
+      },
+      {
+        "Name": "Janet Leigh",
+        "Biography": "From Wikipedia, the free encyclopedia.",
+        "Gender": "Female",
+        "Birthday": "1927-07-06",
+        "Deathday": "2004-10-03",
+        "Birthplace": "Place of BirthMerced",
+        "Country": "USA",
+        "CoverImageUrl": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/239nA27WGKzLnoHtEuuaqJNvsqH.jpg",
+        "CharacterName": "Marion Crane"
+      },
+      {
+        "Name": "Martin Balsam",
+        "Biography": "Martin Henry Balsam (November 4, 1919 – February 13, 1996) was an American character actor. He is best known for a number of film roles, including detective Milton Arbogast in Alfred Hitchcock's Psycho (1960), Arnold Burns in A Thousand Clowns (1965), which earned him the Academy Award for Best Supporting Actor, Juror #1 in 12 Angry Men (1957), and Mr. Green in The Taking of Pelham One Two Three (1974), as well as for his role as Murray Klein in the television sitcom Archie Bunker's Place (1979–1983).",
+        "Gender": "Male",
+        "Birthday": "1919-11-04",
+        "Deathday": "1996-02-13",
+        "Birthplace": "Bronx",
+        "Country": "USA",
+        "CoverImageUrl": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/2j4LJJfTPQtvnjp8LfSGOvWFATO.jpg",
+        "CharacterName": "Det. Milton Arbogast"
+      },
+      {
+        "Name": "John McIntire",
+        "Biography": "From Wikipedia, the free encyclopedia",
+        "Gender": "Male",
+        "Birthday": "1907-06-27",
+        "Deathday": "1991-01-30",
+        "Birthplace": "Spokane",
+        "Country": "USA",
+        "CoverImageUrl": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/knjm7tflaLTysmynYUnvJgv5wIq.jpg",
+        "CharacterName": "Sheriff Al Chambers"
+      },
+      {
+        "Name": "Simon Oakland",
+        "Biography": "Simon Oakland (August 28, 1915 – August 29, 1983) was an American actor of stage, screen, and television.",
+        "Gender": "Male",
+        "Birthday": "1915-08-28",
+        "Deathday": "1983-08-29",
+        "Birthplace": "New York City",
+        "Country": "USA",
+        "CoverImageUrl": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/nA6CmjgGE6HKT2SGoQM87h5fu24.jpg",
+        "CharacterName": "Dr. Fred Richman"
+      },
+      {
+        "Name": "Frank Albertson",
+        "Biography": "From Wikipedia, the free encyclopedia",
+        "Gender": "Male",
+        "Birthday": "1909-02-02",
+        "Deathday": "1964-02-29",
+        "Birthplace": "Fergus Falls",
+        "Country": "USA",
+        "CoverImageUrl": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/18XWFVKqnj3erAkwMNnhQkqIqbD.jpg",
+        "CharacterName": "Tom Cassidy"
+      },
+      {
+        "Name": "Patricia Hitchcock",
+        "Biography": "Patricia Alma O'Connell (née Hitchcock; born 7 July 1928), commonly known as Pat Hitchcock, is an English-born actress and producer. She is the only child of director Alfred Hitchcock and Alma Reville.",
+        "Gender": "Female",
+        "Birthday": "1928-07-07",
+        "Birthplace": "Kensington",
+        "Country": "UK",
+        "CoverImageUrl": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/bgMYy4SJLFcFex91an1D593pBY9.jpg",
+        "CharacterName": "Caroline"
+      }
+    ],
+    "Genres": [
+      {
+        "Name": "Horror"
+      },
+      {
+        "Name": "Drama"
+      },
+      {
+        "Name": "Thriller"
+      }
+    ]
+  }
+]

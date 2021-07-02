@@ -29,7 +29,7 @@ namespace ScrappingTheMovieDb
             //    Console.WriteLine(i);
             //});
 
-            for (int i = 539; i < 539 + 1; i++)
+            for (int i = 98; i < 98 + 1; i++)
             {
                 var movie = GetMovieProperties(context, i);
 
